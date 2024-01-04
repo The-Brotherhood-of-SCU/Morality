@@ -3,7 +3,7 @@ import os
 os.makedirs("out",exist_ok=True)
 f=open("out/out.md","w",encoding="utf-8")
 
-dirs = [i for i in os.listdir() if not os.path.isfile(i) and i not in [".git","out"]]
+dirs = [i for i in os.listdir() if not os.path.isfile(i) and i not in [".git","out",".github"]]
 for chapter in dirs:
     f.write("# "+chapter+"\n\n")
     files=os.listdir(chapter)
