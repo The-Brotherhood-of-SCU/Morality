@@ -12,5 +12,8 @@ for chapter in dirs:
         with open(chapter+"/"+file,"r",encoding="utf-8") as f2:
             f.write(f2.read()) 
             f.write("\n\n")
+with open("footer.md") as footer:
+    f.write("\n")
+    f.write(footer.read())
 
 f.close()
