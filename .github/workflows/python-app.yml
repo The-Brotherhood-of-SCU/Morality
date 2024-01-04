@@ -1,0 +1,39 @@
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+      - README.md
+      - ".github/**"
+      - .gitignore
+  pull_request:
+    branches: [ "main" ]
+    paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+      - README.md
+      - ".github/**"
+      - .gitignore
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: execute python
+      run: |
+        python Generate.py
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
+      with: 
+       folder: out
+        
