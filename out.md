@@ -17,3 +17,9 @@
 ## 1.理想的内涵与特征
 
 
+
+# Contribute
+
+Everyone can do contributions
+
+[Contribute Now](https://github.com/The-Brotherhood-of-SCU/Morality-Review-Material)
