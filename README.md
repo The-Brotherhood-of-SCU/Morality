@@ -1,6 +1,8 @@
 # Morality-Review-Material
 思想道德与法治复习资料
 
+## [点击此处查看](https://github.com/The-Brotherhood-of-SCU/Morality-Review-Material/blob/gh-pages/out.md)
+
 # Contribute
 文档规范
 
