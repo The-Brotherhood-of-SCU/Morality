@@ -10,7 +10,7 @@ for chapter in dirs:
     files=os.listdir("src/"+chapter)
     files.sort()
     for file in files:
-        f.write("## "+file.replace(".md","")+"\n")
+        f.write("## "+file.replace(".md","")+"\n\n")
         with open("src/"+chapter+"/"+file,"r",encoding="utf-8") as f2:
             f.write(f2.read()) 
             f.write("\n\n")
