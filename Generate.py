@@ -6,7 +6,7 @@ f=open("out/index.md","w",encoding="utf-8")
 dirs = [i for i in os.listdir("src") if not os.path.isfile(i) and i not in [".git","out",".github"]]
 dirs.sort()
 for chapter in dirs:
-    f.write("# "+chapter+"\n\n")
+    f.write("# "+chapter[-3:]+"\n\n")
     files=os.listdir("src/"+chapter)
     files.sort()
     for file in files:
